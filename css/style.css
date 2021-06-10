@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bebas Neue', cursive;
+  background-color: #333;
+}
+
+body main {
+  width: 90%;
+  margin: auto;
+  max-width: 800px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main a, body main a:hover, body main a:focus {
+  text-decoration: none !important;
+  color: #fff !important;
+  outline: none !important;
+}
+
+body main .logo {
+  padding: 10px;
+  border: 5px solid #36bed9;
+  color: #333;
+}
+
+body main .logo .subtitulo {
+  text-align: center;
+  color: #f2f2f2;
+  background: #36bed9;
+  padding: 0;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
+  font-size: 36px;
+  font-family: 'Noto Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+body main .logo:hover .subtitulo {
+  background: #fe9140;
+}
+
+body main .text-animate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+
+body main .text-animate div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+body main .text-animate div span {
+  font-size: 100px;
+  font-weight: normal;
+  line-height: 100px;
+}
+
+body main .text-animate div.animacion {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+body main .text-animate .hidden-line {
+  position: absolute;
+  top: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .text-animate > div span {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .text-animate .hidden-line {
+    top: 50px;
+  }
+  .text-animate > div.animacion {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  .logo .subtitulo {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

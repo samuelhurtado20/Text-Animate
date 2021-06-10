@@ -1,0 +1,102 @@
+$logo: #36bed9;
+$subTitle: #f2f2f2;
+$primary: #fe9140;
+$colorDark: #333;
+$height: 100px;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Bebas Neue', cursive;
+	background-color: $colorDark;
+
+    main {
+        width: 90%;
+        margin: auto;
+        max-width: 800px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        a, a:hover, a:focus {
+            text-decoration: none !important;
+            color: #fff !important;
+            outline: none !important;
+        }
+        .logo {
+            padding: 10px;
+            border: 5px solid $logo;
+            color: $colorDark;
+
+            .subtitulo {
+                text-align: center;
+                color: $subTitle;
+                background: $logo;
+                padding: 0;
+                transition: .5s ease all;
+                font-size: 36px;
+                font-family: 'Noto Sans', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            &:hover .subtitulo {
+                background: $primary;
+            }
+        }
+
+        .text-animate {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                transition: .3s ease all;
+
+                span {
+                    font-size: 100px;
+                    font-weight: normal;
+                    line-height: $height;
+                }
+            }
+
+            div.animacion {
+                transform: translateY(-100px);
+            }
+
+            .hidden-line {
+                position: absolute;
+                top: $height;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px){
+	.text-animate > div span {
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+	.text-animate .hidden-line {
+		top: 50px;
+	}
+
+	.text-animate > div.animacion {
+		transform: translateY(-50px);
+	}
+
+	.logo .subtitulo {
+		font-size: 20px;
+	}
+}
